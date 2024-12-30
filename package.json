@@ -1,0 +1,57 @@
+{
+    "name": "@koding88/wakeup-render",
+    "version": "1.0.0",
+    "description": "A package to keep Render servers awake by mutual pinging",
+    "main": "src/index.js",
+    "scripts": {
+        "start:server1": "node examples/server1.js",
+        "start:server2": "node examples/server2.js",
+        "lint": "eslint .",
+        "format": "prettier --write \"**/*.{js,json,md}\"",
+        "test": "jest",
+        "prepare": "husky install"
+    },
+    "keywords": [
+        "render",
+        "wakeup",
+        "ping",
+        "server",
+        "keep-alive"
+    ],
+    "author": "koding88",
+    "license": "MIT",
+    "dependencies": {
+        "express": "^4.18.2",
+        "axios": "^1.6.2",
+        "winston": "^3.11.0",
+        "dotenv": "^16.3.1"
+    },
+    "devDependencies": {
+        "eslint": "^8.55.0",
+        "prettier": "^3.1.0",
+        "jest": "^29.7.0",
+        "husky": "^8.0.3",
+        "lint-staged": "^15.2.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/koding88/wakeup-render.git"
+    },
+    "bugs": {
+        "url": "https://github.com/koding88/wakeup-render/issues"
+    },
+    "homepage": "https://github.com/koding88/wakeup-render#readme",
+    "files": [
+        "src",
+        "examples",
+        "README.md",
+        "LICENSE"
+    ],
+    "engines": {
+        "node": ">=14.0.0"
+    },
+    "lint-staged": {
+        "*.js": "eslint --fix",
+        "*.{js,json,md}": "prettier --write"
+    }
+}
